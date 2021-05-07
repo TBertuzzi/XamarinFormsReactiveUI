@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             Padding="0,60,0,0"
+             x:Class="XamarinFormsReactiveUI.MainPage">
+
+ <ScrollView>
+        <StackLayout>
+            <Entry x:Name="usuario" Placeholder="Usuario" Text="{Binding Usuario, Mode=TwoWay}" />
+            <Entry x:Name="senha" Placeholder="Senha" IsPassword="true" Text="{Binding Senha, Mode=TwoWay}"/>
+            <Button x:Name="login" Text="Login" Command="{Binding LogarCommand, Mode=OneWay}" />
+             <ActivityIndicator IsRunning="{Binding Ocupado}" />
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
